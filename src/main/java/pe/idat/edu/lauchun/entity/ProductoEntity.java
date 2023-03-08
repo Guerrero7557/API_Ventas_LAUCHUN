@@ -1,4 +1,4 @@
-package pe.idat.edu.lauchun.entity;
+package pe.idat.edu.lauchun.Entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -32,7 +32,11 @@ public class ProductoEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name = "idcategoria", nullable = false)
     private CategoriaEntity idcategoria;     
-     
+    
+    @ManyToOne
+    @JoinColumn(name = "idmarca", nullable = false)
+    private MarcaProdEntity idmarca;   
+    
     @Column(name = "nombproducto")
     private String nombproducto;
     
@@ -46,10 +50,7 @@ public class ProductoEntity implements Serializable {
     private String descripcion;
     
     @Column(name = "estado")
-    private String estado;
-    
-    @Column(name = "marca")
-    private String marca;
+    private String estado;        
     
     @Column(name = "imagen")
     private String imagen;

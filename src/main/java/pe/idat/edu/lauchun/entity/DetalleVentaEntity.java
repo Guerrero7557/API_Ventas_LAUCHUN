@@ -1,4 +1,4 @@
-package pe.idat.edu.lauchun.entity;
+package pe.idat.edu.lauchun.Entity;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -18,9 +18,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor //constructor con parametros
 @NoArgsConstructor //constructor sin parametros
 @Data               //genera getters and setters
-@Entity(name = "DetallePedidoEntity")  //define la entidad con la que se va a trabajar
-@Table(name = "detallepedido")
-public class DetallePedidoEntity implements Serializable{
+@Entity(name = "DetalleVentaEntity")  //define la entidad con la que se va a trabajar
+@Table(name = "detalleventa")
+public class DetalleVentaEntity implements Serializable{
     
     private final static long serialVersionUID = 1L;
     
@@ -30,8 +30,8 @@ public class DetallePedidoEntity implements Serializable{
     private long iddetalle;     
     
     @ManyToOne
-    @JoinColumn(name="idpedido", nullable = false)
-    private PedidoEntity idpedido;
+    @JoinColumn(name="idventa", nullable = false)
+    private VentaEntity idventa;
     
     @ManyToOne
     @JoinColumn(name="idproducto", nullable = false)
@@ -39,5 +39,8 @@ public class DetallePedidoEntity implements Serializable{
     
     @Column(name = "cantidad")
     private int cantidad;
+    
+    @Column(name = "montodetallev")
+    private double montodetallev;
     
 }

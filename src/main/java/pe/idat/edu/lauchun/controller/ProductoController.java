@@ -1,4 +1,4 @@
-package pe.idat.edu.lauchun.controller;
+package pe.idat.edu.lauchun.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.idat.edu.lauchun.entity.ProductoEntity;
-import pe.idat.edu.lauchun.service.ProductoService;
+import pe.idat.edu.lauchun.Entity.ProductoEntity;
+import pe.idat.edu.lauchun.Service.ProductoService;
+
 
 @RestController
 @RequestMapping("/producto")
@@ -55,10 +56,8 @@ public class ProductoController {
     }
 
     @DeleteMapping("/{id}")
-    public ProductoEntity delete(@PathVariable long id) {
-        ProductoEntity ObjetoProducto= new ProductoEntity();
-        ObjetoProducto.setEstado("Agotado");
-        return productoService.delete(ProductoEntity.builder().idproducto(id).build());
+    public void delete(@PathVariable long id) {
+        productoService.deleteProducto(id);
     }
     
 }

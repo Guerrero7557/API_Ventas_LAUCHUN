@@ -1,18 +1,14 @@
-
-package pe.idat.edu.lauchun.service;
+package pe.idat.edu.lauchun.Service;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.idat.edu.lauchun.entity.CategoriaEntity;
-import pe.idat.edu.lauchun.repository.CategoriaRepository;
+import pe.idat.edu.lauchun.Entity.CategoriaEntity;
+import pe.idat.edu.lauchun.Repository.CategoriaRepository;
+import pe.idat.edu.lauchun.service.CategoriaService;
 
-/**
- *
- * @author Sebastian
- */
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService{

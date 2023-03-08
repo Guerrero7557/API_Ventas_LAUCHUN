@@ -1,4 +1,4 @@
-package pe.idat.edu.lauchun.controller;
+package pe.idat.edu.lauchun.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.idat.edu.lauchun.entity.CategoriaEntity;
+import pe.idat.edu.lauchun.Entity.CategoriaEntity;
 import pe.idat.edu.lauchun.service.CategoriaService;
-
 
 @RestController
 @RequestMapping("/categoria")

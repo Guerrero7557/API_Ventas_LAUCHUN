@@ -1,4 +1,4 @@
-package pe.idat.edu.lauchun.entity;
+package pe.idat.edu.lauchun.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -19,26 +18,30 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="PedidoEntity")
-@Table(name="pedido")
-public class PedidoEntity implements Serializable{
+@Entity(name="VentaEntity")
+@Table(name="venta")
+public class VentaEntity implements Serializable{
     
     private static final long serialVersionUID=1L;
     
     @Id
-    @Column(name="idpedido")
+    @Column(name="idventa")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idpedido;
+    private long idventa;
     
     @ManyToOne
-     @JoinColumn(name="idcliente", nullable = false)
-    private ClienteEntity idcliente;
+     @JoinColumn(name="idusuario", nullable = false)
+    private UsuarioEntity idusuario;
+    
+    @ManyToOne
+    @JoinColumn(name="idtipopago", nullable = false)
+    private TipoPagoEntity idtipopago;
     
     @Column(name="fechaventa")
     private String fechaventa;
     
-    @Column(name="montototal")
-    private double montototal;
+    @Column(name="montototalv")
+    private double montototalv;
     
     @Column(name="estado")
     private boolean estado;    

@@ -1,12 +1,12 @@
-package pe.idat.edu.lauchun.service;
+package pe.idat.edu.lauchun.Service;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.idat.edu.lauchun.entity.ProductoEntity;
-import pe.idat.edu.lauchun.repository.ProductoRepository;
+import pe.idat.edu.lauchun.Entity.ProductoEntity;
+import pe.idat.edu.lauchun.Repository.ProductoRepository;
 
 @Service
 public class ProductoServiceImpl implements ProductoService{
@@ -43,10 +43,8 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
-    public ProductoEntity delete(ProductoEntity p) {
-        ProductoEntity objetoProducto = productoRepository.getById(p.getIdproducto());
-        objetoProducto.setEstado("Agotado");
-        return productoRepository.save(objetoProducto);      
+    public void deleteProducto(Long xid){
+        productoRepository.deleteById(xid);
     }   
 
     //buscar por categoria

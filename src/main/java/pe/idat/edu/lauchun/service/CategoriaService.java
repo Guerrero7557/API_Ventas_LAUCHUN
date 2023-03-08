@@ -1,15 +1,9 @@
-
-
 package pe.idat.edu.lauchun.service;
 
 import java.util.List;
 import java.util.Optional;
-import pe.idat.edu.lauchun.entity.CategoriaEntity;
+import pe.idat.edu.lauchun.Entity.CategoriaEntity;
 
-/**
- *
- * @author Sebastian
- */
 public interface CategoriaService {
     //funcion que te permita mostrar todos los datos    
     List<CategoriaEntity> findAll();

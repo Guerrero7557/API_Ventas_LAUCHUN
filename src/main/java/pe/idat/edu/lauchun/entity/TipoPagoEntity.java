@@ -12,23 +12,25 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-@Entity(name = "CategoriaEntity")
-@Table(name = "categoria")
-public class CategoriaEntity implements Serializable{
+@Builder           
+@AllArgsConstructor 
+@NoArgsConstructor  
+@Data        
+@Entity(name = "TipoPagoEntity")
+@Table(name = "tipopago")
+public class TipoPagoEntity implements Serializable{
+    
     private final static long serialVersionUID = 1L;
     
     @Id
-    @Column(name = "idcategoria")
+    @Column(name = "idtipopago")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idcategoria;
-    
-    @Column(name = "nombrecategoria")
-    private String nombrecategoria;
+    private long idtipopago;     
+        
+    @Column(name = "nombtipopago")
+    private String nombtipopago;
     
     @Column(name = "estado")
     private boolean estado;
+    
 }

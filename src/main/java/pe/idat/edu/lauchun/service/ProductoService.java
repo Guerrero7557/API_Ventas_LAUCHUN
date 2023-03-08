@@ -1,8 +1,8 @@
-package pe.idat.edu.lauchun.service;
+package pe.idat.edu.lauchun.Service;
 
 import java.util.List;
 import java.util.Optional;
-import pe.idat.edu.lauchun.entity.ProductoEntity;
+import pe.idat.edu.lauchun.Entity.ProductoEntity;
 
 public interface ProductoService {
     
@@ -24,6 +24,6 @@ public interface ProductoService {
     ProductoEntity update (ProductoEntity p);
     
     
-    ProductoEntity delete (ProductoEntity p);
+    public void deleteProducto(Long xid);
         
 }
